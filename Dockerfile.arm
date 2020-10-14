@@ -1,0 +1,10 @@
+FROM balenalib/rpi-raspbian:buster
+RUN [ "cross-build-start" ]
+
+RUN apt-get update && apt-get full-upgrade -y && apt-get install -y --no-install-recommends \
+	ca-certificates \
+&& rm -rf /var/lib/apt/lists/*
+
+ENV CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+RUN [ "cross-build-end" ]
