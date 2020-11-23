@@ -3,6 +3,8 @@ RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get full-upgrade -y && apt-get install -y --no-install-recommends \
 	ca-certificates \
+	curl \
+	tar \
 && rm -rf /var/lib/apt/lists/*
 
 ENV SSL_CERT_DIR=/etc/ssl/certs
