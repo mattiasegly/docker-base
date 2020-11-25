@@ -1,4 +1,4 @@
-FROM balenalib/rpi-raspbian:buster
+FROM balenalib/rpi-raspbian:bullseye
 RUN [ "cross-build-start" ]
 
 #Balena images are noninteractive. Setting to default according to https://docs.docker.com/engine/faq/

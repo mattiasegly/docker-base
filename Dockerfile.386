@@ -1,4 +1,4 @@
-FROM i386/debian:buster
+FROM i386/debian:bullseye
 
 #Balena images are noninteractive. Setting to default according to https://docs.docker.com/engine/faq/
 ENV DEBIAN_FRONTEND=newt
