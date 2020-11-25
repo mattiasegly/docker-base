@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Release specific tag
 docker manifest create \
 	$DOCKER_REPO:$SOURCE_BRANCH \
 	$DOCKER_REPO:$SOURCE_BRANCH-amd64 \
