@@ -4,10 +4,9 @@
 docker manifest create \
 	$DOCKER_REPO:$SOURCE_BRANCH \
 	$DOCKER_REPO:$SOURCE_BRANCH-amd64 \
-	$DOCKER_REPO:$SOURCE_BRANCH-386 \
 	$DOCKER_REPO:$SOURCE_BRANCH-arm
 
-for ARCH in amd64 386 arm
+for ARCH in amd64 arm
 do
 docker manifest annotate \
 	$DOCKER_REPO:$SOURCE_BRANCH \
