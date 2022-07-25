@@ -1,9 +1,5 @@
 # docker-base
 Custom Debian Docker base images for personal projects.
+Multiarch build using balena's Raspberry Pi image and docker's official Debian image.
 
-Currently supports:<BR>
-Debian amd64<BR>
-Debian 386 (i386)<BR>
-Raspbian arm (arm32v6)
-
-20220113
+20220725
