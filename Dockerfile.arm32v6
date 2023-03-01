@@ -1,5 +1,6 @@
-ARG ARCH=arm32v6
-FROM balenalib/rpi-debian:bullseye
+ARG ARCH=
+ARG SOURCE_BRANCH=
+FROM balenalib/rpi-debian:${SOURCE_BRANCH}
 
 RUN apt-get update && apt-get full-upgrade -y && apt-get install -y --no-install-recommends \
 	ca-certificates \

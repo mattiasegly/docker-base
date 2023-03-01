@@ -1,5 +1,6 @@
 ARG ARCH=
-FROM ${ARCH}/debian:bullseye
+ARG SOURCE_BRANCH=
+FROM ${ARCH}/debian:${SOURCE_BRANCH}
 
 RUN apt-get update && apt-get full-upgrade -y && apt-get install -y --no-install-recommends \
 	ca-certificates \

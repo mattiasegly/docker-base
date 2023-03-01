@@ -44,17 +44,6 @@ docker manifest create \
 docker manifest push --purge \
 	$DOCKER_REPO:$SOURCE_BRANCH
 
-#Default "latest" tag
-docker manifest create \
-	$DOCKER_REPO:latest \
-	--amend $DOCKER_REPO:$SOURCE_BRANCH-amd64 \
-	--amend $DOCKER_REPO:$SOURCE_BRANCH-i386 \
-	--amend $DOCKER_REPO:$SOURCE_BRANCH-arm32v6 \
-	--amend $DOCKER_REPO:$SOURCE_BRANCH-arm32v7 \
-	--amend $DOCKER_REPO:$SOURCE_BRANCH-arm64v8
-docker manifest push --purge \
-	$DOCKER_REPO:latest
-
 #Clean up
 docker image rm balenalib/rpi-debian:$SOURCE_BRANCH
 for ARCH in amd64 i386 arm32v7 arm64v8
